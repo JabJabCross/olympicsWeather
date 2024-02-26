@@ -1,0 +1,14 @@
+Package: olympicsWeather
+Title: Obtenez les prévisions météorologiques.
+Version: 0.0.0.9000
+Authors@R: 
+    person("Ugo", "Gestin", , "ugo.gestin@sfr.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Ce package fournit des fonctionnalités pour obtenir les prévisions météorologiques des sites olympiques, des adresses ou des coordonnées GPS.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
