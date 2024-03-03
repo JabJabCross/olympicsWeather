@@ -100,6 +100,7 @@ print(result)
 #13
 
 get_forecast.character <- function(address) {
+  library(tidygeocoder)
   if (!is.character(address) || length(address) != 1) {
     stop("L'argument address doit être un caractère de taille 1.")
   }
