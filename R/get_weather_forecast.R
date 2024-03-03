@@ -10,7 +10,9 @@ library(dplyr)
 
 #7
 perform_request <- function(lat, lon) {
+  library(jsonlite)
   library(tibble)
+  library(httr2)
   url <- "https://api.open-meteo.com/v1/forecast"
   table_reponse <-
     request(url) |>
@@ -26,6 +28,7 @@ rep <- perform_request(48.85, 2.35)
 #8
 
 unnest_response <- function(rep) {
+  library(tibble)
   unnested_table <- tibble(date_heure = unlist(rep$hourly[1][[1]]),
                            temperature_celsius=unlist(rep$hourly[2][[1]]),
                            temperature_ressentie_celsius=unlist(rep$hourly[3][[1]]),
@@ -54,6 +57,7 @@ usethis::use_test("unnest_response")
 #10
 library(tidygeocoder)
 address_to_gps <- function(adresse) {
+  library(tidygeocoder)
   df_adresse <- data.frame("nom" = character(), addr = character(), stringsAsFactors = FALSE)
 
   df_adresse <- rbind(df_adresse, data.frame(addr = adresse), stringsAsFactors = FALSE)
