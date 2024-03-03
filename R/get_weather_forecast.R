@@ -3,7 +3,6 @@ library(httr2)
 library(jsonlite)
 library(tibble)
 library(purrr)
-library(tidygeocoder)
 library(usethis)
 library(testthat)
 library(dplyr)
@@ -11,6 +10,7 @@ library(dplyr)
 
 #7
 perform_request <- function(lat, lon) {
+  library(tibble)
   url <- "https://api.open-meteo.com/v1/forecast"
   table_reponse <-
     request(url) |>
