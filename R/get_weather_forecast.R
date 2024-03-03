@@ -119,6 +119,12 @@ print(resultat_final)
 #' Ensuite, les prévisions météorologiques sont obtenues à partir des coordonnées géographiques à l'aide de la fonction get_forecast.numeric.
 #'
 #' @param x Une adresse de type character ou des coordonnées géographiques de type numeric de taille 2.
+#' @import tibble
+#' @import jsonlite
+#' @import httr2
+#' @import tidygeocoder
+#' @import dplyr
+#' @import devtools
 #' @return Un tibble contenant les prévisions météorologiques.
 #' @examples
 #' # Obtention des prévisions météorologiques pour une adresse
